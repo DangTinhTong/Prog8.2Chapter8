@@ -7,11 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "Rectangle.h"
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
-        NSLog(@"Hello, World!");
+       // NSLog(@"Hello, World!");
+        
+        Rectangle *myRectangle =[[Rectangle alloc] init];
+        [myRectangle setWidth:10 andHeight:20];
+        NSLog(@"Rectangle: w %i and h %i",myRectangle.width,myRectangle.height);
+        NSLog(@"Area = %i and Perimeter = %i",[myRectangle area],[myRectangle perimeter] );
     }
     return 0;
 }
